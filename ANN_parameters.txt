@@ -1,0 +1,12 @@
+learning_rate=	0.1
+num_layers=	3
+num_input=	80
+num_hidden=	12
+num_output=	2
+desired_error=	0.001
+max_iterations=	2000
+iterations_between_reports=	5
+num_bin=	2
+bins=	50	500
+ranges=	500	5000
+step=	25
