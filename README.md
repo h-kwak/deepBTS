@@ -28,9 +28,17 @@ train   Train and save ANN configuration to the output file
 --con   Previous network configuration to continue training (default = none)
 ```
 
-### Requirements
-Test PRO-seq data (both plus and minus strand bedgraph files)
-Trained network file
+### Install
+#### Requirement
+Fast Artificial Neural Network library [FANN](https://github.com/libfann/fann)
+#### Make
+```
+make
+```
+
+### Input data files
+- Test PRO-seq data (both plus and minus strand bedgraph files)
+- Trained network file
 
 ### Output
 Bedgraph file of a deepBTS score specified by -o option
