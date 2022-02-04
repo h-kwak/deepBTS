@@ -28,43 +28,34 @@ train   Train and save ANN configuration to the output file
 --con   Previous network configuration to continue training (default = none)
 ```
 
-### Installation
-#### Requirement
+## Installation
+### Requirement
 Fast Artificial Neural Network library [FANN](https://github.com/libfann/fann)
-#### Make
+### Make
 ```
 make
 ```
-
+## deepBTS
 ### Input data files
 - Test PRO-seq data (both plus and minus strand bedgraph files)
 - Trained network file
-
 ### Output
 Bedgraph file of a deepBTS score specified by -o option
-
-## deepBTS
-
 ### Usage example
-
-	deepBTS -p proseq.pl.bg -m proseq.mn.bg -n output.net -o output.bg
-
-
-
+```
+deepBTS -p proseq.pl.bg -m proseq.mn.bg -n output.net -o output.bg
+```
 ## deepBTS make: makes a training data
-
 ### Requirements
 Reference PRO-seq data (both plus and minus strand bedgraph files)
 TRE bed file as a standard annotation.
-
 ### Output
 Train data file specified by -o option
 Automatically generates parameter file for neural network options (specified by --p option)
-
 ### Usage example
-
-  dpPRO make -p proseq.pl.bg -m proseq.mn.bg -b tre.bed -o output.train
-
+```
+dpPRO make -p proseq.pl.bg -m proseq.mn.bg -b tre.bed -o output.train
+```
 ### Advanced options
 1. dpPRO make scans through the PRO-seq files and collects readcounts in a range of regions. Similar to microscopes that have more than one lens and offer multiple resolutions, dpPRO scans different ranges at multiple resolutions. By default, it scans +/- 500 bp region and +/- 5 kb regions in 50 bp and 500 bp resolution (bin sizes) respectively. dpPRO may improve performance by scanning extended regions at different resolutions. Note that if you are adding a smaller bin size, the step size option needs to decrease accordingly.
 For example, add the following options to the command line:
