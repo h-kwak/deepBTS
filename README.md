@@ -28,7 +28,7 @@ train   Train and save ANN configuration to the output file
 --con   Previous network configuration to continue training (default = none)
 ```
 
-### Install
+### Installation
 #### Requirement
 Fast Artificial Neural Network library [FANN](https://github.com/libfann/fann)
 #### Make
